@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+        #holder {
+            width: 600px;
+            height: 600px;
+            line-height: 600px;
+            background-color: #d9d9d9;
+            text-align: center;
+        }
+
+        .img {
+            max-width: 600px;
+            max-height: 600px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="img" src="">
+    <div id="holder">
+        Drag your file here
+    </div>
+
+    <script>
+        window.$ = window.jQuery = require('jquery');
+        let $holder = $('#holder');
+        let $img = $('.img');
+
+        document.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            for (const f of e.dataTransfer.files) {
+                console.log('File(s) you dragged here: ', f.path)
+                $holder.css('display', 'none')
+                $img.css('display', 'block')
+                $img.attr('src', f.path)
+            }
+        });
+        document.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>
