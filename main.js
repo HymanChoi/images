@@ -1,12 +1,13 @@
-const { app, BrowserWindow } = require('electron')
-// app 控制应用生命周期的模块。
-// browser-window 创建原生浏览器窗口的模块
+const { app, BrowserWindow, ipcMain, dialog } = require('electron')
 
 function createWindow() {
     // 创建浏览器窗口
     const win = new BrowserWindow({
-        width: 1600,
-        height: 900,
+        width: 1200,
+        height: 800,
+        frame: false,
+        resizable: false,
+        center: true,
         webPreferences: {
             nodeIntegration: true
         }
@@ -39,7 +40,7 @@ app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
         createWindow()
     }
+
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. 也可以拆分成几个文件，然后用 require 导入。
+require('./src/js/ipcMain')

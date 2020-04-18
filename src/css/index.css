@@ -1,0 +1,94 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  color: #cccccc;
+  background-color: #1b1b1b;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-size: 18px;
+  color: #cccccc;
+}
+
+.aside {
+  width: 200px;
+  height: 750px;
+  background-color: #313131;
+  color: #cccccc;
+}
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.list-item_current {
+  background-color: #434343;
+}
+
+.list-item:hover {
+  background-color: #434343;
+  cursor: pointer;
+}
+
+.section {
+  width: 800px;
+}
+
+#holder {
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 30px;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.img {
+  display: none;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 30px;
+  border: 1px solid #eeeeee;
+}
+.btn {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #409eff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #53a8ff;
+  cursor: pointer;
+}
+
+.select,
+.change,
+.save {
+  margin-left: 30px;
+}

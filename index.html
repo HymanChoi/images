@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <!-- 引入 css -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+
+<body>
+    <header class="header row">
+        <div class="title">Images</div>
+        <div class="btn-group">
+        </div>
+    </header>
+    <div class="row">
+        <aside class="aside">
+            <div class="list">
+                <div class="list-item list-item_current">1</div>
+                <div class="list-item">2</div>
+                <div class="list-item">3</div>
+                <div class="list-item">4</div>
+                <div class="list-item">5</div>
+                <div class="list-item">6</div>
+                <div class="list-item">7</div>
+                <div class="list-item">8</div>
+                <div class="list-item">9</div>
+                <div class="list-item">10</div>
+                <div class="list-item">11</div>
+                <div class="list-item">12</div>
+                <div class="list-item">13</div>
+                <div class="list-item">14</div>
+                <div class="list-item">15</div>
+            </div>
+        </aside>
+        <section class="section">
+            <img class="img" src="">
+            <div id="holder">
+                <div>Drag your file here</div>
+            </div>
+            <br>
+            <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
+            <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
+            <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
+        </section>
+    </div>
+
+    <!-- 引入 js -->
+    <script>window.$ = window.jQuery = require("jquery");</script>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
