@@ -1,4 +1,4 @@
-const { ipcRenderer } = require('electron')
+const { ipcRenderer: ipc } = require('electron')
 
 // 按键类型
 let btnType = "";
@@ -8,19 +8,27 @@ let imgPath = "";
 btnClick = type => {
     this.btnType = type;
     switch (this.btnType) {
+        // 最小化窗口
+        case 'min':
+            ipc.send('min');
+            break;
+        // 关闭窗口
+        case 'close':
+            ipc.send('close');
+            break;
         // 选择
         case 'select':
-            ipcRenderer.send('open-directory-dialog', 'openFile');
-            ipcRenderer.once('selectedItem', this.getPath);
+            ipc.send('open-directory-dialog', 'openFile');
+            ipc.once('selectedItem', this.getPath);
             break;
-
         // 转换
         case 'change':
             console.log('change');
+            break;
         // 保存
         case 'save':
-            ipcRenderer.send('open-directory-dialog', 'openDirectory');
-            ipcRenderer.once('selectedItem', this.getPath);
+            ipc.send('open-directory-dialog', 'openDirectory');
+            ipc.once('selectedItem', this.getPath);
             break;
     }
 }
@@ -51,9 +59,8 @@ document.addEventListener('drop', e => {
     e.preventDefault();
     e.stopPropagation();
 
-    console.log(e.dataTransfer.files);
     for (const f of e.dataTransfer.files) {
-        console.log('File(s) you dragged here: ', f)
+        console.table(f)
         // 限制上传类型
         if (f.type != 'image/jpeg' && f.type != 'image/png') {
             alert('只能上传图片文件')
