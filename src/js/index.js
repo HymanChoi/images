@@ -83,3 +83,33 @@ document.addEventListener('dragover', (e) => {
     e.preventDefault();
     e.stopPropagation();
 });
+
+// 菜单栏切换
+$('.list>.list-item').on('click', function (e) {
+    $(this).addClass('list-item_active');
+    $(this).siblings().removeClass('list-item_active');
+    $('.content').siblings().hide();
+    switch (e.toElement.innerText) {
+        case '介绍':
+            $('.introduction').show();
+            break;
+        case '压缩':
+            $('.compression').show();
+            break;
+        case '裁剪':
+            $('.cutting').show();
+            break;
+        case '调色':
+            $('.toning').show();
+            break;
+        case '旋转':
+            $('.spin').show();
+            break;
+        case '水印':
+            $('.watermark').show();
+            break;
+        case '其他':
+            $('.other').show();
+            break;
+    }
+})

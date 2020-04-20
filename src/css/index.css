@@ -98,7 +98,7 @@
   height: 50px;
 }
 
-.list-item_current {
+.list-item_active {
   background-color: #434343;
 }
 
@@ -110,6 +110,14 @@
 /* section */
 .section {
   width: 800px;
+}
+
+.content {
+  display: none;
+}
+
+.introduction {
+  display: block;
 }
 
 #holder {
