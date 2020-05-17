@@ -1,26 +1,17 @@
 {
-  "name": "images",
+  "name": "crazyimages",
   "version": "1.0.0",
-  "description": "This is an electron project.",
-  "main": "main.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch main.js --exec electron --inspect=5858 ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HymanChoi/Images.git"
-  },
-  "author": "HymanChoi",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HymanChoi/Images/issues"
-  },
-  "homepage": "https://github.com/HymanChoi/Images#readme",
   "devDependencies": {
-    "electron": "^8.2.0"
+    "electron": "^8.2.5"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.1"
   }
 }

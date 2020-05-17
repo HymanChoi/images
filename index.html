@@ -4,124 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Images</title>
+    <title>Document</title>
     <!-- 引入 css -->
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-    <header class="header row">
-        <div class="title">Images</div>
-        <div class="btn-group">
-            <img class="min" src="./src/img/minimize.png" onclick="btnClick('min')">
-            <img class="close" src="./src/img/close.png" onclick="btnClick('close')">
-        </div>
-    </header>
-    <div class="row">
-        <aside class="aside">
-            <div class="about">
-                <img src="./src/img/avatar.jpg" class="avatar">
-                <div class="name">Hyman Choi</div>
-                <div class="contact">
-                    <img src="./src/img/github.png">
-                    <img src="./src/img/mail.png">
+    <div class="content">
+        <header>
+            <img class="option" src="./src/img/minimize.png" onclick="clickBtn('min')">
+            <!-- <img class="option" src="./src/img/maximize.png" onclick="clickBtn('max')"> -->
+            <img class="option" src="./src/img/close.png" onclick="clickBtn('close')">
+        </header>
+        <section>
+            <div class="left">
+                <div id="placeholder">
+                    <span class="tip">可拖拽图片到此处</span>
+                    <img id="img" src="">
+                </div>
+                <div class="btn-group">
+                    <div class="open" onclick="clickBtn('open')">打开</div>
+                    <div class="remove" onclick="clickBtn('remove')">移除</div>
+                    <div class="save" onclick="clickBtn('save')">保存</div>
                 </div>
             </div>
-            <div class="list">
-                <div class="list-item list-item_active">介绍</div>
-                <div class="list-item">压缩</div>
-                <div class="list-item">裁剪</div>
-                <div class="list-item">调色</div>
-                <div class="list-item">旋转</div>
-                <div class="list-item">水印</div>
-                <div class="list-item">其他</div>
-            </div>
-        </aside>
-        <section class="section">
-            <div class="content introduction">
-                <div class="title">introduction</div>
-                <img class="img" src="">
-                <div id="holder">
-                    <div>Drag your file here</div>
-                </div>
-                <br>
-                <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
-                <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
-                <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
-            </div>
-            <div class="content compression">
-                <div class="title">compression</div>
-                <img class="img" src="">
-                <div id="holder">
-                    <div>Drag your file here</div>
-                </div>
-                <br>
-                <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
-                <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
-                <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
-            </div>
-            <div class="content cutting">
-                <div class="title">cutting</div>
-                <img class="img" src="">
-                <div id="holder">
-                    <div>Drag your file here</div>
-                </div>
-                <br>
-                <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
-                <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
-                <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
-            </div>
-            <div class="content toning">
-                <div class="title">toning</div>
-                <img class="img" src="">
-                <div id="holder">
-                    <div>Drag your file here</div>
-                </div>
-                <br>
-                <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
-                <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
-                <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
-            </div>
-            <div class="content spin">
-                <div class="title">spin</div>
-                <img class="img" src="">
-                <div id="holder">
-                    <div>Drag your file here</div>
-                </div>
-                <br>
-                <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
-                <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
-                <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
-            </div>
-            <div class="content watermark">
-                <div class="title">watermark</div>
-                <img class="img" src="">
-                <div id="holder">
-                    <div>Drag your file here</div>
-                </div>
-                <br>
-                <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
-                <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
-                <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
-            </div>
-            <div class="content other">
-                <div class="title">other</div>
-                <img class="img" src="">
-                <div id="holder">
-                    <div>Drag your file here</div>
-                </div>
-                <br>
-                <input type="button" value="上传" class="btn select" onclick="btnClick('select')">
-                <input type="button" value="转换" class="btn change" onclick="btnClick('change')">
-                <input type="button" value="保存" class="btn save" onclick="btnClick('save')">
+            <div class="right">
+                <div class="box" onclick="clickBtn('BAndW')">黑白</div>
+                <div class="box" onclick="clickBtn('BAndW')">缩放</div>
+                <div class="box" onclick="clickBtn('BAndW')">旋转</div>
+                <div class="box" onclick="clickBtn('BAndW')">水印</div>
+                <div class="box" onclick="clickBtn('BAndW')">裁剪</div>
+                <div class="box" onclick="clickBtn('BAndW')">其他</div>
+                <div class="box" onclick="clickBtn('BAndW')">黑白</div>
+                <div class="box" onclick="clickBtn('BAndW')">黑白</div>
             </div>
         </section>
     </div>
 
     <!-- 引入 js -->
-    <script>window.$ = window.jQuery = require("jquery");</script>
-    <script src="./src/js/index.js"></script>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="./src/js/script.js"></script>
+
 </body>
 
 </html>
